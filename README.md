@@ -20,6 +20,6 @@ This project is a coding challenge completed as a part of Frontend Mentor. The c
 
 
 ## Screenshots 📷
-[image](./design/desktopfinal.PNG)
-[](./design/mobilefinal.PNG)
+![desktop result](./design/desktopfinal.PNG)
+![](./design/mobilefinal.PNG)
 
