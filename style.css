@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 :root {
     
-    --container-width-mobile: 90%;
-    
     /* Primary Colors */
 --Light-red: hsl(0, 100%, 67%);
 --Orangey-yellow: hsl(39, 100%, 56%);
@@ -23,42 +21,29 @@
 --Light-lavender: hsl(241, 100%, 89%);
 --Dark-gray-blue: hsl(224, 30%, 27%);
 
-
-/* ### Notes */
-/* Use transparency to get the color variations necessary to match the design. Hint: look into using `hsla()`. */
-
-
-
-/* ### Body Copy */
-
+/* ### Body Font */
 --Font-size: 18px;
-
-/* ### Font */
-
-/* - Family: [Hanken Grotesk](https://fonts.google.com/specimen/Hanken+Grotesk)
-- Weights: 500, 700, 800 */
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
 body {
     font-size: var(--Font-size);
-    /* height: 75vh; */
 }
 
 main {
     border-radius: 2rem;
-    width: 40%;
-    /* height: 60%; */
+    width: 35rem;
     margin: 10rem auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* box-shadow: .5rem .5rem 1.5rem var(--Light-lavender); */
+    grid-template-columns: 1fr 1fr;
     box-shadow: .5rem .5rem 1.5rem var(--Pale-blue);
 }
 
@@ -76,12 +61,11 @@ main {
     margin-top: 2rem;
 }
 
-
 .circle {
     background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
     border-radius: 50%;
-    width: 70%;
-    padding: 2.5rem;
+    width: 9rem;
+    padding: 2rem;
     margin: 1.5rem auto;
 }
 
@@ -103,9 +87,8 @@ main {
 .left-side #last-para {
     color: var(--Light-lavender);
     margin: 1rem 0 2rem;
+    font-size: .9rem;
 }
-
-
 
 .right-side {
     width: 80%;
@@ -120,9 +103,10 @@ main {
 .summary-bar {
     display: flex;
     justify-content: space-between;
-    padding: .7rem 1rem;
-    border-radius: .8rem;
+    padding: .7rem;
+    border-radius: .7rem;
     margin-bottom: .9rem;
+    font-size: 1rem;
 }
 
 .summary-bar-left-side {
@@ -135,7 +119,7 @@ main {
 
 .summary-total-number {
     margin-left: .5rem;
-    color: var(--Light-lavender);
+    color: hsl(224, 30%, 60%);
 }
 
 .summary-bar1 {
@@ -173,8 +157,6 @@ main {
 .right-side a {
     display: block;
     background: var(--Dark-gray-blue);
-    color: var(--White);
-    text-decoration: none;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -182,9 +164,47 @@ main {
     height: 2.8rem;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
+    color: var(--White);
 
 }
 
-footer {
-    /* background: red; */
+.right-side a:hover {
+    background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
 }
+
+/* footer .attribution {
+    background: hsl(0, 0%, 0%);
+    padding: .5rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.attribution a {
+    color: var(--Light-slate-blue);
+} */
+
+
+/* =====================
+        Media Query
+======================== */
+@media screen and (max-width: 480px) {
+    main {
+        grid-template-columns: 1fr;
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+    .left-side {
+        border-radius: 0 0 2rem 2rem;
+    }
+}
+
+
+
+
+
